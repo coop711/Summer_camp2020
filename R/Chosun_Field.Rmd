@@ -84,7 +84,9 @@ library(extrafont)
 g0 <- ggplot()
 g1 <- g0 +
   geom_area(data = field_tbl, 
-            mapping = aes(x = Year, y = Area, fill = Province),
+            mapping = aes(x = Year, 
+                          y = Area, 
+                          fill = Province),
             colour = "black", 
             size = 0.2, 
             alpha = 0.4, 
@@ -127,7 +129,8 @@ g4
 g5 <- g4 + 
   scale_y_continuous(name = "토지 면적(결)",
                      breaks = cumsum(rev(field[3, ])),
-                     labels = format(cumsum(rev(field[3, ])), big.mark = ","))
+                     labels = format(cumsum(rev(field[3, ])), 
+                                     big.mark = ","))
 g5
 ```
 

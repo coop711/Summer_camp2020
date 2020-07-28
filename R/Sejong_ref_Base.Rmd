@@ -62,7 +62,7 @@ pos <- function(x){
 
 ```{r, pie for total, fig.width = 5, fig.height = 5}
 par(family = "KoPubWorldDotum Medium")
-gray_2 <- gray.colors(12)[c(12, 7)]
+# gray_2 <- gray.colors(12)[c(12, 7)]
 rainbow_2 <- rainbow(2)[2:1]
 r <- 0.8
 pos_total <- pos(prop.table(Vote_total) * 100)
@@ -169,7 +169,7 @@ par(family = "KoPubWorldDotum Medium")
 mosaicplot(t(Vote_Region[, -2]), 
            col = rainbow_2, 
            main = "", 
-           xlab = "계급" , 
+           xlab = "계급", 
            ylab = "찬반",
            off = c(3, 1)) 
 title(main = "지역별 찬반",
