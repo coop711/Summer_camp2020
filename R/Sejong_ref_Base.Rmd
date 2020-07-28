@@ -62,7 +62,7 @@ pos <- function(x){
 
 ```{r, pie for total, fig.width = 5, fig.height = 5}
 par(family = "KoPubWorldDotum Medium")
-gray_2 <- gray.colors(12)[c(12, 7)]
+# gray_2 <- gray.colors(12)[c(12, 7)]
 rainbow_2 <- rainbow(2)[2:1]
 r <- 0.8
 pos_total <- pos(prop.table(Vote_total) * 100)
@@ -75,7 +75,7 @@ pie(Vote_total,
 text(x = pos_total_x, y = pos_total_y,
      labels = paste(names(Vote_total),
                     format(Vote_total, big.mark = ","),
-                    sep = ":"))
+                    sep = "\n"))
 title(main = "전체 찬반", 
       cex.main = 1.5,
       family = "KoPubWorldDotum Bold")
@@ -110,7 +110,7 @@ text(x = pos_Class_2_x[, "관료"],
      y = pos_Class_2_y[, "관료"],
      labels = paste(names(Vote_Class_2[, "관료"]),
                     format(Vote_Class_2[, "관료"], big.mark = ","),
-                    sep = ":"))
+                    sep = "\n"))
 title(main = "관료", 
       cex.main = 1.5,
       family = "KoPubWorldDotum Bold")
@@ -122,7 +122,7 @@ text(x = pos_Class_2_x[, "품관촌민"],
      y = pos_Class_2_y[, "품관촌민"],
      labels = paste(names(Vote_Class_2[, "품관촌민"]),
                     format(Vote_Class_2[, "품관촌민"], big.mark = ","),
-                    sep = ":"))
+                    sep = "\n"))
 title(main = "품관촌민", 
       cex.main = 1.5,
       family = "KoPubWorldDotum Bold")
@@ -169,7 +169,7 @@ par(family = "KoPubWorldDotum Medium")
 mosaicplot(t(Vote_Region[, -2]), 
            col = rainbow_2, 
            main = "", 
-           xlab = "계급" , 
+           xlab = "계급", 
            ylab = "찬반",
            off = c(3, 1)) 
 title(main = "지역별 찬반",
